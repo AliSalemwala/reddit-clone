@@ -1,4 +1,4 @@
-const bcrypt = require("bcrypt");
+//const bcrypt = require("bcrypt");
 let Profile = require("../models/profile");
 let Account = require("../models/account");
 
@@ -20,7 +20,10 @@ exports.view = function (req, res) {
         res.render('./login')
     }
 }
+
+// TODO: bcrypt used here
 exports.change_password = function (req, res) {
+    /*
     bcrypt.hash(req.body.password, 10, function (err, hash) {
         if (err) throw err
 
@@ -37,6 +40,9 @@ exports.change_password = function (req, res) {
             }
         });
     });
+    */
+    // TODO: bcrypt removal idea
+    res.send("OK")
 }
 
 exports.delete_account = function (req, res) {

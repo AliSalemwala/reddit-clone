@@ -1,5 +1,5 @@
 const express = require("express");
-const bcrypt = require("bcrypt");
+//const bcrypt = require("bcrypt");
 const validator = require("validator");
 const router = express.Router();
 
@@ -148,7 +148,9 @@ router.get('/u/:profile/comments', function (req, res) {
     })
 });
 
+// TODO: bcrypt is used here
 router.post('/register', function (req, res) {
+    /*
     if (req.body.username && req.body.password) {
         req.body.username = req.body.username.toLowerCase();
 
@@ -192,6 +194,11 @@ router.post('/register', function (req, res) {
             error: `Username and password is required.`
         })
     }
+    */
+    // TODO: bcrypt removal idea
+    res.json({
+        success: `This should skip bcrypt.`
+    })
 })
 
 module.exports = router;

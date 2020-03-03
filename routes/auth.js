@@ -1,5 +1,5 @@
 const express = require("express");
-const bcrypt = require("bcrypt");
+//const bcrypt = require("bcrypt");
 const validator = require("validator");
 const router = express.Router();
 
@@ -25,9 +25,10 @@ router.get("/register", function (req, res) {
   }
 });
 
-
+// TODO: bcrypt used here
 // route for when user submits register details
 router.post("/register", validateRegister(), function (req, res) {
+  /*
   // hash the password
   bcrypt.hash(req.body.password, 10, function (err, hash) {
     if (err) throw error
@@ -63,6 +64,9 @@ router.post("/register", validateRegister(), function (req, res) {
       }
     })
   })
+  */
+  // TODO: bcrypt removal idea
+  res.redirect("../")
 })
 
 // route for when user views login page
@@ -76,8 +80,10 @@ router.get("/login", function (req, res) {
   }
 })
 
+// TODO: bcrypt used here
 // route for when user submits login details
 router.post("/login", function (req, res) {
+  /*
   // make input not case sensitive
   req.body.username = req.body.username.toLowerCase()
   req.body.password = req.body.password.toLowerCase()
@@ -120,6 +126,9 @@ router.post("/login", function (req, res) {
       })
     }
   })
+  */
+  // TODO: bcrypt removal idea
+  res.redirect("../")
 })
 
 // MIDDLEWARE
