@@ -3,9 +3,6 @@
 - Run "npm install" to install all dependancies
 - Currently it is running wihtout bcrypt but there are some pages which break due to certain expectations from the methods removed.
 
-# Beddit
-A reddit clone written using node.js / express.js / mongodb / passport.js
-
 ### Features:
 * Frontpage
 * Subreddits
